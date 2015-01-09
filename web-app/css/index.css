@@ -1,0 +1,698 @@
+@CHARSET "UTF-8";
+
+html {
+	font-family:Sans-Serif;
+	background-color: #ddd;
+	background-image: -moz-linear-gradient(center top, #aaa, #ddd);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #aaa), color-stop(1, #ddd));
+	background-image: linear-gradient(top, #aaa, #ddd);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr = '#aaaaaa', EndColorStr = '#dddddd');
+	background-repeat: no-repeat;
+	height: 100%;
+	/* change the box model to exclude the padding from the calculation of 100% height (IE8+) */
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+	        
+}
+#page-body {
+	margin: 0em 1em 1.25em 18em;
+}
+
+h2 {
+	margin-top: 10px;
+	margin-bottom: 5px;
+	font-size: 16px;
+	position: absolute;
+}
+h2:before{
+	content:url(../images/Star.svg);
+	margin-left: 8px;
+	margin-right: 8px;
+}
+
+p {
+	line-height: 1.5;
+	margin: 0.25em 0;
+}
+body {
+	background: #000000;
+	color: #ffffff;
+	margin: 0 auto;
+	max-width: 930px;
+	overflow-x: hidden; /* prevents box-shadow causing a horizontal scrollbar in firefox when viewport < 960px wide */
+}
+h1 {
+	color: #ffffff;
+	font-weight: normal;
+	font-size: 24px;
+	padding-top: 10px;
+	padding-left: 0px;
+	font-family: Sans-Serif;
+	display: inline-block;
+	margin-bottom: -1px;
+	margin-top: -1px;
+}
+.nav ul {
+	
+	padding-left: 0;
+	zoom: 1;
+}
+
+.nav li {
+	display: block;
+	float: left;
+	list-style-type: none;
+	margin-right: 0.5em;
+	padding-right: 1.5em;
+}
+
+.nav li span{
+	width:100px;
+}
+a:link{
+	color: #ffffff;
+}
+.nav {
+	background-color: #000000;
+	padding-right: 0.5em;
+	padding-left: 1.0em;	  
+	zoom: 1;
+    position:relative;
+    font-size: 12px;
+
+}
+.nav:before {
+	position: absolute;
+	content: " ";
+	top: -7px;
+	right: 0px;
+	bottom: 7px;
+	left: 0px;
+	background-color: transparent;
+	border: 1px solid rgb(102, 102, 102);
+  }
+#wrapper{
+	min-width: 931px;
+}
+#tree, #detail {
+	border-color: #666666;
+	border-style: solid;
+	border-radius: 10px;
+	border-width: 1px;
+	display: inline-block; 
+	position: relative;
+	
+}
+#tree {
+	width: 600px;
+	height: 600px;
+	margin-left: 10px;
+	background:url(../images/Tree.png) no-repeat center;
+	background-size: cover;
+}
+#detail {
+	width: 300px;
+	height: 600px;
+}
+#photo, #personale {
+	display: inline-block; 
+}
+#photo {
+	width: 80px;
+	height: 105px;
+	background:url(../images/Harry.png) no-repeat top left;
+	background-size: cover;
+	margin-top: 10px;
+	margin-left: 10px;
+	box-shadow: 10px 10px 0.5px #222222;
+    border: 1px #000000;
+}
+#topPane, #mediaPane {
+	width: 300px;
+	border-color: #666666;
+	border-style: solid;
+	border-width: 1px;
+	position: absolute;
+	background: -webkit-linear-gradient(left, #696969, black); /* For Safari */
+	background: -o-linear-gradient(right, #696969, black); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(right, #696969, black); /* For Firefox 3.6 to 15 */	
+	background: -ms-linear-gradient(#696969, black);/*For IE10*/	
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#696969', endColorstr='black');
+	zoom: 1;
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1,startColorstr='#696969', endColorstr='#000000');/*For IE7-8-9*/ 
+	height: 1%;/*For IE7*/ 
+	background: linear-gradient(to right, #696969, black); /* Standard syntax (must be last) */	
+}
+#bottomPane {
+	height: 250px;
+	width: 300px;
+	top: 350px;
+	border-color: #666666;
+	border-style: solid;
+	border-top-style:none;
+	border-radius: 10px;
+	border-top-left-radius:none;
+	border-top-right-radius:none;
+	border-width: 1px;
+	display: inline-block; 
+	position: relative;
+	background: -webkit-linear-gradient(left, #696969, black); /* For Safari */
+	background: -o-linear-gradient(right, #696969, black); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(right, #696969, black); /* For Firefox 3.6 to 15 */	
+	
+	background: -ms-linear-gradient(#696969, black);/*For IE10*/	
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#696969', endColorstr='black');
+	zoom: 1;
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1,startColorstr='#696969', endColorstr='#000000');/*For IE7-8-9*/
+	
+	background: linear-gradient(to right, #696969, black); /* Standard syntax (must be last) */	
+	position: absolute;
+	z-index: 1;
+}
+#mediaPane {
+	height: 320px;
+	z-index: 2;
+	top: 35px;
+}
+#topPane {
+	height: 230px;
+	top: 35px;
+	color: white;
+	z-index: 3;
+	
+}
+#personale{
+	width:180px;
+	font-size: 12px;
+	margin-left: 15px;
+}
+/*
+@media (max-width: 767px) { 
+    #tree{width:100px;}
+}
+*/			
+ .logo{
+	height: 30px;
+	float: right;
+	display: inline-block;
+	padding-top: 10px;
+	padding-right: 10px;
+ }
+ /*
+ .logo::after{
+    Red line under the company name 
+    content: " "; 
+    display:block; 
+    position:relative; 
+    background: rgb(182,182,182); 
+    height: 1px; 
+ }
+  */
+.list {
+ 	height: 16px;
+	position: relative;
+	z-index: 90;
+}
+/*
+.nav li.list:after {
+ 	content: "\25BC";
+}
+*/
+/* ACTION BUTTONS */
+
+.buttons {
+	background-color: #000000;
+	overflow: hidden;
+	padding: 0.3px;
+	   -moz-box-shadow: 0 0 3px 1px #aaaaaa;
+	-webkit-box-shadow: 0 0 3px 1px #aaaaaa;
+	        box-shadow: 0 0 3px 1px #aaaaaa;
+	margin: 0.1px 0 0 0;
+	border: none;
+}
+
+.buttons input,
+.buttons a {
+	background-color: transparent;
+	border: 0;
+	color: #666666;
+	cursor: pointer;
+	display: inline-block;
+	margin: 0 0.25px 0;
+	overflow: visible;
+	padding: 0.25px 0.7px;
+	text-decoration: none;
+
+	   -moz-border-radius: 0.3px;
+	-webkit-border-radius: 0.3px;
+	        border-radius: 0.3px;
+}
+
+.blackButton:hover, .blackButton:focus{
+	background-color: #999999;
+	color: #ffffff;
+	outline: none;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+	   -moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	        box-shadow: none;
+}
+#editButton:before {
+    border: 1px none rgb(0,0,0);
+    content: " ";
+    position: absolute;
+    background-color: transparent;
+    left: 0px;
+    right: 0px;
+    bottom: 7px;
+    top: 7px;
+}
+div#personale #born {
+	margin-top:14px;
+}
+#editBlock{
+	display: block;
+	margin-left: 10px;
+	margin-top: 10px;
+	width: 112px;
+}
+strong#editPerson {
+	text-decoration:none;
+	font-size: 13.5px;
+	margin-bottom: 10px;
+	display: inline-block;
+}
+strong#addMember {
+	font-size: 13.5px;
+	color: white;
+	position: absolute;
+	top: 240.5px;
+	margin-left: 10px;
+}
+strong#familyLabel{
+	font-size: 12px;
+	color: white;
+	position: absolute;
+	display: inline-block;
+	margin-top: 10px;
+	margin-left: 5px;
+}
+#filter {
+	position: relative;
+	z-index:3;
+}
+#filter input{
+	display:inline-block;
+	margin-left: 55px;
+	margin-top: 30px;
+	width: 230px;
+	border-radius: 4px;
+	
+}
+#filter div{
+	display: inline;
+	margin-left: 10px;
+	width: 10px;
+	position: absolute;
+	top: 30px;
+}
+#bottomPane .blackButton {
+	position: absolute;
+	width: 50px;
+	display: inline;
+	margin-top: 10px;
+	margin-left: 240px;
+}
+#triangle{
+	position: relative;
+	top: -15px;
+	left: 115px;
+	color: black;
+}
+#blueButton {
+	height: 17px;
+	width: 100px;
+	font-size: 12px;
+	font-weight: bolder;
+	color: #FFF;
+	text-align: center;
+	margin-left: 10px;
+	position: relative;
+	top: 226px;
+	padding: 3.8px;
+	border-color: #00008B;
+	border-style: solid;
+	text-align: center;
+		border-width: 1px;
+			   -moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		        border-radius: 5px;
+		
+		background: -webkit-linear-gradient(#009FFF, #0066FF, #46ADAD, #3366CC, #3366CC, #000099, #000099); /* For Safari */
+		background: -o-linear-gradient(#009FFF, #0066FF, #46ADAD, #3366CC, #3366CC, #000099, #000099); /* For Opera 11.1 to 12.0 */
+		background: -moz-linear-gradient(#009FFF, #0066FF, #46ADAD, #3366CC, #3366CC, #000099, #000099); /* For Firefox 3.6 to 15 */
+background: -ms-linear-gradient(#009FFF, #0066FF, #46ADAD, #3366CC, #3366CC, #000099, #000099);/*For IE10*/	
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#009FFF', endColorstr='#000099');
+	zoom: 1;
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#009FFF', endColorstr='#000099');/*For IE7-8-9*/ 
+
+	
+		background: linear-gradient(#009FFF, #0066FF, #46ADAD, #3366CC, #3366CC, #000099, #000099); /* Standard syntax (must be last) */
+}
+
+.new-select-style-wpandyou select {
+    background: transparent;
+    height: 25px;
+	font-size: 16px;
+	line-height: 1;
+	-webkit-appearance: none;
+	width: 268px;
+	border-color: blue;
+	border-style: solid;
+	border-width: 0.5px;
+   }
+ .new-select-style-wpandyou {
+    overflow: hidden;
+    height: 25px;
+	width: 135px;
+	font-size: 1px;
+	content: "";
+	margin-left: 10px;
+	margin-top: 10px;
+	padding-top: 0px;
+	position: relative;
+	top: 250.87px;	
+	border-radius: 4px;
+	
+	background: -ms-linear-gradient(#CCFFFF, #CCFFFF, #FFFFFF, #66CCFF, #00CCFF, #00CCFF);/*For IE10*/	
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#CCFFFF', endColorstr='#00CCFF');
+	zoom: 1;
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#CCFFFF', endColorstr='#00CCFF');/*For IE7-8-9*/ 
+		
+	background: linear-gradient(#CCFFFF, #CCFFFF, #FFFFFF, #66CCFF, #00CCFF, #00CCFF) repeat scroll 0% 0% transparent;
+	
+}
+img#mediaPane{
+	position:relative;
+	bottom:0.1px;
+}
+.redButton, .blackButton {
+	/* Internet Explorer 10 */
+	display:-ms-flexbox;
+	-ms-flex-pack:center;
+	-ms-flex-align:center;
+	
+	/* Firefox */
+	display:-moz-box;
+	-moz-box-pack:center;
+	-moz-box-align:center;
+	
+	/* Safari, Chrome, and Opera */
+	display:-webkit-box;
+	-webkit-box-pack:center;
+	-webkit-box-align:center;
+	
+	/* W3C */
+	display:box;
+	box-pack:center;
+	box-align:center;	
+	
+	border-width:1px;	
+	font-weight: bolder;
+	font-size: 10px;
+}
+.redButton{
+	width: 40px;
+	display: inline-block;
+	float:right;	
+	padding: 3px;
+	margin-top: 6px;
+	font-weight: bolder;
+	text-align: center;
+	border-color: darkred;
+	border-style: solid;
+		   -moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	        border-radius: 5px;
+	background: -webkit-linear-gradient(white, white, red, #B00000, #FF0000, #980000 ); /* For Safari */
+	background: -o-linear-gradient(white, white, red, #B00000, #FF0000, #980000 ); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(white, white, red, #B00000, #FF0000, #980000 ); /* For Firefox 3.6 to 15 */
+	
+	background: -ms-linear-gradient(white, white, red, #B00000, #FF0000, #980000);/*For IE10*/	
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='red', endColorstr='#980000');
+	zoom: 1;
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='red', endColorstr='#980000');/*For IE7-8-9*/ 
+	
+	background: linear-gradient(white, white, red, #B00000, #FF0000, #980000 ) repeat scroll 0% 0% transparent; /* Standard syntax (must be last) */
+}
+.blackButton{
+	background-color: #000000;
+	padding: 0.3px;
+	text-align: center;
+	width: 111px;
+	border-color: #222222;
+	border-style: solid;
+	padding: 2.5px 2.5px;
+	margin-top: 0.15px;
+		   -moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	        border-radius: 5px;
+	
+	background: -webkit-linear-gradient(#444444, #555555, black, black); /* For Safari */
+	background: -o-linear-gradient(#444444, #555555, black, black); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#444444, #555555, black, black); /* For Firefox 3.6 to 15 */
+	
+	background: -ms-linear-gradient(#444444, #555555, black, black);/*For IE10*/	
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#444444', endColorstr='black');
+	zoom: 1;
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#444444', endColorstr='black');/*For IE7-8-9*/ 
+	
+	background: linear-gradient(#444444, #555555, black, black); /* Standard syntax (must be last) */	
+}
+#timeSlider, #zoomSlider {
+	width: 60px;
+	height: 110px;
+	background: none repeat scroll 0% 0% black;
+	opacity: 0.6;
+	border-radius: 5px;
+	position: relative;
+	top: 450px;
+}
+#timeSlider{
+	float: left;
+	left: 20px;
+}
+
+#tree span{
+	color:#888888;
+	font-size: 12px;
+	float: right;
+	position: relative;
+	top: 70px;
+	right: 15px;
+}
+#zoomSlider{
+	float: right;
+	margin-right: 20px;
+}
+span#year{
+	top: 1px;
+}
+span#time{
+	top: 55px;
+}
+#tree input{
+	width: 70px;
+	position: relative;
+	top: 40px;
+	right: 8px;
+	-ms-transform:rotate(-90deg); /* IE 9 */
+	-webkit-transform:rotate(-90deg); /* Safari and Chrome */
+	transform: rotate(-90deg);
+}
+
+#timeSlider input {
+	top: 25px;
+}
+strong#bottomPane{
+	position:relative;
+	bottom:1px;
+}
+
+/* TABLES */
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+	margin-bottom: 1px;
+	margin-left: 0.5px;
+	overflow: scroll;
+	background: transparent;
+}
+
+tr {
+	border: 0;
+}
+
+tr>td:first-child {
+	color: orangered;
+}
+
+tr>td:first-child, tr>th:first-child {
+	padding-left: 20px;
+}
+
+tr>td:last-child, tr>th:last-child {
+	padding-right: 1.25px;
+}
+tr>td{
+	color: white;
+}
+
+td, th {
+	line-height: 15px;
+	text-align: left;
+	vertical-align: top;
+	font-size: 10px;
+}
+
+th {
+	background-color: black;
+	background-image: -moz-linear-gradient(top, #696969, black);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #696969), color-stop(1, black));
+	background: -ms-linear-gradient(#696969, black);/*For IE10*/
+	    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr = '#696969', EndColorStr = 'black');
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#696969', EndColorStr='black')";
+	color: #666666;
+	font-weight: bold;
+}
+
+
+th:hover, tr:hover {
+	background: -webkit-linear-gradient(left, #777777, #777777, black, black); /* For Safari */
+	background: -o-linear-gradient(left, #777777, #777777, black, black); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(left, #777777, #777777, black, black); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to right, #777777, #777777, black, black); /* Standard syntax (must be last) */
+}
+
+/* define height and width of scrollable area. Add 16px to width for scrollbar          */
+div.tableContainer {
+	clear: both;
+	border: 1px solid #963;
+	height: 285px;
+	overflow: auto;
+	width: 756px
+}
+
+/* Reset overflow value to hidden for all non-IE browsers. */
+html>body div.tableContainer {
+	overflow: hidden;
+	width: 756px
+}
+
+/* define width of table. IE browsers only                 */
+div.tableContainer table {
+	float: left;
+	width: 740px
+}
+
+/* define width of table. Add 16px to width for scrollbar.           */
+/* All other non-IE browsers.                                        */
+html>body div.tableContainer table {
+	width: 756px
+}
+
+/* set table header to a fixed position. WinIE 6.x only                                       */
+/* In WinIE 6.x, any element with a position property set to relative and is a child of       */
+/* an element that has an overflow property set, the relative value translates into fixed.    */
+/* Ex: parent element DIV with a class of tableContainer has an overflow property set to auto */
+thead.fixedHeader tr {
+	position: relative
+}
+
+/* set THEAD element to have block level attributes. All other non-IE browsers            */
+/* this enables overflow to work on TBODY element. All other non-IE, non-Mozilla browsers */
+html>body thead.fixedHeader tr {
+	display: block
+}
+
+/* make the TH elements pretty */
+thead.fixedHeader th {
+	padding: 4px 3px;
+	text-align: left
+}
+
+/* make the A elements pretty. makes for nice clickable headers                */
+thead.fixedHeader a, thead.fixedHeader a:link, thead.fixedHeader a:visited {
+	color: #FFF;
+	display: block;
+	text-decoration: none;
+	width: 100%
+}
+
+/* make the A elements pretty. makes for nice clickable headers                */
+/* WARNING: swapping the background on hover may cause problems in WinIE 6.x   */
+thead.fixedHeader a:hover {
+	color: #FFF;
+	display: block;
+	text-decoration: underline;
+	width: 100%
+}
+
+/* define the table content to be scrollable                                              */
+/* set TBODY element to have block level attributes. All other non-IE browsers            */
+/* this enables overflow to work on TBODY element. All other non-IE, non-Mozilla browsers */
+/* induced side effect is that child TDs no longer accept width: auto                     */
+html>body tbody.scrollContent {
+	display: block;
+	height: 262px;
+	overflow: auto;
+	width: 100%
+}
+
+/* make TD elements pretty. Provide alternating classes for striping the table */
+/* http://www.alistapart.com/articles/zebratables/                             */
+tbody.scrollContent td, tbody.scrollContent tr.normalRow td {
+	padding: 2px 3px 3px 4px
+}
+
+tbody.scrollContent tr.alternateRow td {
+	background: #EEE;
+	border-bottom: none;
+	border-left: none;
+	border-right: 1px solid #CCC;
+	border-top: 1px solid #DDD;
+	padding: 2px 3px 3px 4px
+}
+
+/* define width of TH elements: 1st, 2nd, and 3rd respectively.          */
+/* Add 16px to last TH for scrollbar padding. All other non-IE browsers. */
+/* http://www.w3.org/TR/REC-CSS2/selector.html#adjacent-selectors        */
+html>body thead.fixedHeader th {
+	width: 200px
+}
+
+html>body thead.fixedHeader th + th {
+	width: 240px
+}
+
+html>body thead.fixedHeader th + th + th {
+	width: 316px
+}
+
+/* define width of TD elements: 1st, 2nd, and 3rd respectively.          */
+/* All other non-IE browsers.                                            */
+/* http://www.w3.org/TR/REC-CSS2/selector.html#adjacent-selectors        */
+html>body tbody.scrollContent td {
+	width: 100px;
+	/* white-space: nowrap; */
+}
+
+html>body tbody.scrollContent td + td {
+	width: 240px
+}
+
+html>body tbody.scrollContent td + td + td {
+	width: 300px
+}
