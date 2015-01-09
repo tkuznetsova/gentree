@@ -12,9 +12,7 @@
 
 SET FOREIGN_KEY_CHECKS=0;
 
-CREATE DATABASE `rail`
-    CHARACTER SET 'latin1'
-    COLLATE 'latin1_swedish_ci';
+CREATE DATABASE `rail`;
 
 USE `rail`;
 
