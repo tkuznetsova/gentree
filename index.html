@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Family.Show</title>
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		
+		<script>
+		$(document).ready(function () {
+			console.log( "ready!" );
+				$('.list').hover(function(){
+					$(this).children("div").toggle();
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="15" height="15" ></svg>
+		<div class="logo">
+			<img src="images/logo.png')}" alt="Vertigo"/>
+		</div>
+		<h1>Family.Show </h1>		
+		<div class="nav" role="navigation">
+			<ul>
+				<li>New</li>
+				<li class="list">Open &#9660;
+					<div style="display:none;">
+						<div>Open PDF document</div>
+						<div>Open text file</div>
+						<div>Open photo</div>
+					</div>
+				</li>
+				<li class="list">Save &#9660;
+					<div style="display:none;">
+						<div>Save</div>
+						<div>Save As</div>
+						<div>Export</div>
+					</div>
+				</li>
+				<li class="list">GEDCOM &#9660;
+					<div style="display:none;">
+						<div>About</div>
+						<div>Tutorial</div>
+						<div>Help</div>
+					</div>
+				</li>
+				<li class="list">Skins &#9660;
+					<div style="display:none;">
+						<div>Strobe</div>
+						<div>Office</div>
+						<div>New</div>
+					</div>
+				</li>
+			</ul>			
+		</div>
+		<div id="wrapper">
+
+			<div id="tree">
+				<div id="zoomSlider">
+					<input type="range" name="slider" max="1000" min="600" />
+					<script>
+						$(document).ready(function () {
+							$('slider').change(functon(){
+								var w = $('slider').value();
+								$('#tree').css('width', w);
+							});
+						});
+					</script>
+					<span>Zoom</span>					
+				</div>
+				<div id="timeSlider">
+					<span id="year">2001</span>
+					<input type="range" name="slider" max="3" min="1" />
+					<span id="time">Time</span>
+				</div>
+			</div>
+			
+			<div id="detail">
+				<h2>William Arthur Philip Win...</h2>
+				<div class="redButton">Delete</div>
+				<div id="bottomPane">
+					<strong id="familyLabel">Family (81)</strong>
+					<div class="blackButton">Expand</div>
+					<div id="filter">
+						<div>Filter</div>
+						<input />
+					</div>
+					<table>
+						<thead>
+							<tr>
+			                    <th>Name</th>
+			                    <th>Born</th>
+			                    <th>Died</th>
+			                    <th>Age</th>
+		                    </tr>
+		                </thead>              
+		                <tbody>
+			                <tr><td class="name">Rose Victoria Bridgitte Windsor</td><td>1980</td><td>-</td><td>27</td></tr>
+			                <tr><td class="name">Rowan Lancelles</td><td>1980</td><td>-</td><td>27</td></tr>
+			                <tr><td class="name">Sarah Frances Elizabeth Windsor</td><td>1980</td><td>-</td><td>27</td></tr>
+			                <tr><td class="name">Sarah Margaret Ferguson</td><td>1980</td><td>-</td><td>27</td></tr>
+			                <tr><td class="name">Sophie Lancelles</td><td>1980</td><td>-</td><td>27</td></tr>
+			                <tr><td class="name">Sylvana Tomaselli</td><td>1980</td><td>-</td><td>27</td></tr>
+			                <tr><td class="name">Thomas Lascelles</td><td>1980</td><td>-</td><td>27</td></tr>
+			                <tr><td class="name">William Arthur Philip Windsor</td><td>1980</td><td>-</td><td>27</td></tr>
+			                <tr><td class="name">William Arthur Philip Windsor</td><td>1980</td><td>-</td><td>27</td></tr>
+			                <tr><td class="name">Rose Victoria Bridgit Windsor</td><td>1980</td><td>-</td><td>27</td></tr>
+			            </tbody>
+					</table>
+				</div>
+				<div id="mediaPane">
+					<strong id="addMember">Add a Family Member</strong>
+					<div class="new-select-style-wpandyou">
+						<select>
+							<option value="volvo">Add Brother</option>
+						</select>
+						<img id="triangle" src="images'/triangle.svg" alt="BlackBottomTriangle"/>
+					</div>
+					<div id="blueButton" class="buttons">Add Brother</div>
+				</div>
+				<div id="topPane">
+					<div id="photo">
+					</div>
+					<div id="personale">
+						<div>Full Name</div>
+						<div><strong>William Arthur Philip Winds...</strong></div>											
+						<div id="born">Born</div>
+						<div><strong>21.6.1982</strong></div>
+						<div><strong>St. Mary's Hosp., Padding...</strong></div>
+						
+					</div>
+					<div id="editBlock">
+						<strong id="editPerson">Edit Person &nbsp; &nbsp; &nbsp;</strong>
+						<div class="blackButton" id="editButton">Details</div>
+						<div class="blackButton">Relationships</div>
+						<div class="blackButton">Photos &amp; Stories</div>
+					</div>
+				</div>						
+			</div>
+			
+		</div>	
+	</body>
+</html>
